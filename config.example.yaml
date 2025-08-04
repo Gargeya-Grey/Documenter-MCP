@@ -1,0 +1,53 @@
+# Example configuration for MCP Documentation Server
+
+name: "MCP Documentation Server"
+version: "0.1.0"
+
+# Logging configuration
+log_level: "INFO"
+log_file: "documenter.log"
+
+# Analysis configuration
+max_file_size_mb: 10
+exclude_patterns:
+  - "__pycache__"
+  - ".git"
+  - ".venv"
+  - "node_modules"
+  - "*.log"
+  - "*.tmp"
+
+# Language configurations
+languages:
+  python:
+    extensions: [".py"]
+    docstring_styles: ["google", "numpy", "sphinx"]
+    parser: "python"
+  javascript:
+    extensions: [".js", ".jsx"]
+    docstring_styles: ["jsdoc"]
+    parser: "javascript"
+  typescript:
+    extensions: [".ts", ".tsx"]
+    docstring_styles: ["jsdoc"]
+    parser: "typescript"
+  java:
+    extensions: [".java"]
+    docstring_styles: ["javadoc"]
+    parser: "java"
+  cpp:
+    extensions: [".cpp", ".h", ".hpp"]
+    docstring_styles: ["doxygen"]
+    parser: "cpp"
+  go:
+    extensions: [".go"]
+    docstring_styles: ["godoc"]
+    parser: "go"
+
+# Output configuration
+output:
+  output_dir: "docs"
+  master_file_name: "documentation"
+  formats: ["markdown", "html"]
+  include_toc: true
+  include_search: true
