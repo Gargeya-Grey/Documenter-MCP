@@ -62,12 +62,6 @@ src/
 
 ## Development
 
-### Running Tests
-
-```bash
-python -m pytest tests/
-```
-
 ### Contributing
 
 1. Fork the repository
